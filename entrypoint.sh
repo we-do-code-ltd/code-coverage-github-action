@@ -14,7 +14,7 @@ GITHUB_SHA=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" \
 
 # Step 1: Install dependencies (if needed)
 # For example, if you use Composer:
-composer install
+#composer install
 
 # Step 2: Run PHPUnit to generate coverage information
 vendor/bin/phpunit --coverage-clover coverage.xml
