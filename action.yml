@@ -1,0 +1,18 @@
+name: 'PHPUnit Code Coverage Comparison'
+description: 'Compares PHPUnit coverage between branches'
+
+inputs:
+  target-branch:
+    description: 'The target branch for comparison'
+    required: true
+  github-token:
+    description: 'GitHub token'
+    required: true
+  coverage-threshold:
+    description: 'Coverage threshold percentage'
+    required: false
+    default: '75'  # Set a default value if not provided
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
