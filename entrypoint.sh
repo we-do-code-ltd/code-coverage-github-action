@@ -14,10 +14,10 @@ GITHUB_SHA=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" \
 
 # Step 1: Install dependencies (if needed)
 # For example, if you use Composer:
-# composer install
+composer install
 
 # Step 2: Run PHPUnit to generate coverage information
-phpunit --coverage-clover coverage.xml
+vendor/bin/phpunit --coverage-clover coverage.xml
 
 # Step 3: Compare coverage with the target branch
 COVERAGE=$(grep -oP 'filename="\K[^"]+' coverage.xml)
